@@ -89,7 +89,7 @@ public class GeneratorLanguage extends LanguageProvider
 		add("tooltip.bloodmagic.soulGem.grand", "A gem used to contain a large amount of will.");
 		add("tooltip.bloodmagic.soulSnare.desc", "Throw at a monster and then kill them to obtain their demonic will.");
 		add("tooltip.bloodmagic.willGauge", "A strange device that can measure the Demon Will in the Aura.");
-		add("item.bloodmagic.bleedingedge.desc", "Bleeding Edge of the Hidden Realm");
+		add("item.bloodmagic.bleedingedge.desc", "Firel - Bleeding Edge of the Hidden Realm");
 
 		add("tooltip.bloodmagic.syntheticpoint.desc", "A synthetic living armour point. It's... wriggling.");
 
@@ -125,7 +125,6 @@ public class GeneratorLanguage extends LanguageProvider
 		add("tooltip.bloodmagic.arctool.additionaldrops", "Increases chance of additional outputs by: x%s.");
 		add("tooltip.bloodmagic.arctool.craftspeed", "Increases crafting speed by: x%s.");
 		add("tooltip.bloodmagic.arctool.uses", "Uses remaining: %s.");
-
 
 		add("tooltip.bloodmagic.experienceTome", "A book used to store experience.");
 		add("tooltip.bloodmagic.experienceTome.exp", "Exp: %0.3f");
