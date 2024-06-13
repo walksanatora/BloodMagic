@@ -23,7 +23,11 @@ public class CuriosCompat
 
 	public NonNullList<ItemStack> getCuriosInventory(Player player)
 	{
-		IItemHandlerModifiable itemHandler = CuriosApi.getCuriosInventory(player).resolve().get().getEquippedCurios();
+		Optional<> curioInv = CuriosApi.getCuriosInventory(player).resolve();
+		if (!curioInv.isPresent()) {
+			return NonNullList.create();
+		}
+		IItemHandlerModifiable itemHandler = curioInv.get().getEquippedCurios();
 		NonNullList<ItemStack> inventory = NonNullList.create();
 		for (int i = 0; i < itemHandler.getSlots(); i++)
 		{
