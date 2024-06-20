@@ -6,12 +6,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.type.capability.ICuriosItemHandler;
 import top.theillusivec4.curios.api.type.inventory.ICurioStacksHandler;
 import wayoftime.bloodmagic.core.LivingArmorRegistrar;
 import wayoftime.bloodmagic.core.living.LivingStats;
 import wayoftime.bloodmagic.core.living.LivingUtil;
 import wayoftime.bloodmagic.impl.BloodMagicAPI;
 import java.util.Map;
+import java.util.Optional;
 
 public class CuriosCompat
 {
@@ -23,8 +25,8 @@ public class CuriosCompat
 
 	public NonNullList<ItemStack> getCuriosInventory(Player player)
 	{
-		Optional<> curioInv = CuriosApi.getCuriosInventory(player).resolve();
-		if (!curioInv.isPresent()) {
+		Optional<ICuriosItemHandler> curioInv = CuriosApi.getCuriosInventory(player).resolve();
+		if (curioInv.isEmpty()) {
 			return NonNullList.create();
 		}
 		IItemHandlerModifiable itemHandler = curioInv.get().getEquippedCurios();
